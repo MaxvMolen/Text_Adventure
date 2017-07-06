@@ -4,7 +4,8 @@ import java.util.Set;
 
 public class Item {
 	
-	public HashMap<String, Melee> weapons; 
+	private HashMap<String, Melee> weapons; 
+	//private int weight;
 	
 	public Item(){
 	   /* weapons = new HashMap<String, Melee>();
@@ -18,8 +19,8 @@ public class Item {
 	    weapons.put("knife", p1);*/
 		//MeleeWeapon();
 	}
-	
-	public void MeleeWeapon(){
+	// public melee was public void
+	public Melee MeleeWeapon(){
 
 	    weapons = new HashMap<String, Melee>();
 	    
@@ -31,9 +32,9 @@ public class Item {
 	    //string (name of the item), item number
 	    weapons.put("knife", p1);
 	    //weapons.remove("knife", p1); removes weapon from hashmap
-
 	    
 	    System.out.println(weapons);
+	    return p1;
 	}
 
 	//description what search sent to room

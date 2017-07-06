@@ -8,7 +8,7 @@ public class Melee {
 
 	public Melee() {
 		
-		knife = new Knife();
+		//knife = new Knife(10);
 	}
 
 }

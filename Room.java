@@ -31,12 +31,14 @@ class Room
      */
     public Room(String descripti)
     {
-    	item = new Item();
+    	System.out.println(" =========Rooms=========");
+    	//item = new Item();
     	// inventory
-    	inventoryRoom = new Inventory(); // new inventory 
+    	inventoryRoom = new Inventory();
+    //	inventoryRoom = new Inventory(); // new inventory 
     	System.out.println(descripti); // prints location and what weapon is in the room.
-    	inventoryRoom.room();
-    	
+    //	inventoryRoom.room(); //  adds item to rooms
+    	//inventoryRoom.addItem();
         this.description = descripti;
         /*if(descripti == description){
     		inventoryRoom = new Inventory(); // new inventory 
@@ -45,9 +47,11 @@ class Room
         exits = new HashMap<String, Room>(); 
     }
     
-    //public void 
-    
-	
+    public void getItem(){
+    	//ads an item to the rooms inventory
+    	//inventoryRoom = new Inventory();
+    	inventoryRoom.addItem();
+    }
     
     /**
      * Define an exit from this room.
@@ -64,7 +68,7 @@ class Room
     public String getShortDescription()
     {
     	description = item.getShortDescription();
-    	// description = item
+    	//description = item
     	//return "You see a " + weaponDescription + " laying on the ground" + ".\n" + getExitString();
         return description;
     }

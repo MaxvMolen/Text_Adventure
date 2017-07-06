@@ -39,6 +39,7 @@ class Game
 
         // create the rooms
         outside = new Room("outside the main entrance of the university");
+        outside.getItem(); //puts item in inventory of room
         theatre = new Room("in a lecture theatre");
         pub = new Room("in the campus pub");
         lab = new Room("in a computing lab");
