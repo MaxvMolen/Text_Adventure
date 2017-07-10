@@ -47,10 +47,10 @@ class Room
         exits = new HashMap<String, Room>(); 
     }
     
-    public void getItem(){
+    public void getItem(String name){
     	//ads an item to the rooms inventory
     	//inventoryRoom = new Inventory();
-    	inventoryRoom.addItem();
+    	inventoryRoom.addItem(name);
     }
     
     /**
@@ -80,7 +80,7 @@ class Room
      */
     public String getLongDescription()
     {
-        return "You are " + description + ".\n" + "You look around for exits" + ".\n" + getExitString();
+        return "You are " + description + ".\n" + "You look around for ways to go" + ".\n" + getExitString();
     }
 
     /**

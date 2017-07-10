@@ -39,8 +39,11 @@ class Game
 
         // create the rooms
         outside = new Room("outside the main entrance of the university");
-        outside.getItem(); //puts item in inventory of room
+        outside.getItem("knife"); //puts item in inventory of room
+        
         theatre = new Room("in a lecture theatre");
+        theatre.getItem("key");
+        
         pub = new Room("in the campus pub");
         lab = new Room("in a computing lab");
         office = new Room("in the computing admin office");
@@ -98,6 +101,10 @@ class Game
         System.out.println();
         System.out.println("Welcome to the world of Blank");
         System.out.println("Blank is a mysterious adventure game");
+        System.out.println("");
+        System.out.println("You wake up in a forrest you don't remember how you got here.");
+        System.out.println("You stand up and see an abandoned university.");
+        System.out.println("The last thing that you seem to remember was that you were walking to school.");
         System.out.println("Type 'help' if you need help.");
         System.out.println();
         System.out.println(player.getCurrentRoom().getLongDescription());
@@ -114,6 +121,7 @@ class Game
 
         if(command.isUnknown()) {
             System.out.println("I don't know what you mean...");
+            System.out.println("Try typing help if you don't know all commands.");
             return false;
         }
 
@@ -149,7 +157,7 @@ class Game
     private void printHelp()
     {
         System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the destroyed university.");
+        System.out.println("around at the abandoned university.");
         System.out.println();
         System.out.println("Your command words are:");
         parser.showCommands();
@@ -229,6 +237,7 @@ class Game
     {
         if(command.hasSecondWord()) {
             System.out.println("Quit what?");
+            System.out.println("Try using quit with no second command.");
             return false;
         }
         else

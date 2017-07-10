@@ -7,7 +7,9 @@ public class Knife {
 	public int damage = 10;*/
 	//public int Weight = 10;
 
-	public Knife(int Weight) {
+	public String knifes;
+
+	public Knife() {
 		//System.out.println("knife");
 	}
 
