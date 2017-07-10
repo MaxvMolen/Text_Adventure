@@ -4,7 +4,6 @@ class Player {
 	private Room currentRoom;
 	
 	private int healthP;
-	
 	// inventory player
 	private Inventory inventoryPlayer;
 
@@ -16,8 +15,8 @@ class Player {
 		
 		// inventory
 		inventoryPlayer = new Inventory();
-		inventoryPlayer.player();
-		//add item to inventory of player
+		
+		//inventoryPlayer.addItem();
     }
 	
 	// getter

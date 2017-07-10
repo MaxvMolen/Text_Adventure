@@ -19,6 +19,7 @@ class Game
 {
     private Parser parser;
     private Player player;
+    private Item knife,torch;
 
     /**
      * Create the game and initialise its internal map.
@@ -26,11 +27,18 @@ class Game
     public Game()
     {
     	player = new Player();
+    	createItems();
         createRooms();
         parser = new Parser(); 
     }
 
-    /**
+    private void createItems() {
+		// TODO Auto-generated method stub
+    	knife = new Item();
+    	torch = new Item();
+	}
+
+	/**
      * Create all the rooms and link their exits together.
      */
     private void createRooms()
@@ -39,10 +47,13 @@ class Game
 
         // create the rooms
         outside = new Room("outside the main entrance of the university");
-        outside.getItem("knife"); //puts item in inventory of room
+       
+        outside.addItem(torch); //puts item in inventory of room.
+        outside.addItem(knife); //puts item in inventory of room.
         
+        outside.removeItem(knife); // removes item from inventory room
+        outside.removeItem(torch); // removes item from inventory room
         theatre = new Room("in a lecture theatre");
-        theatre.getKey("key");
         
         pub = new Room("in the campus pub");
         lab = new Room("in a computing lab");

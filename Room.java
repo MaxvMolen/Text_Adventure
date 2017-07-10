@@ -20,9 +20,8 @@ class Room
 {
     private String description;
     private HashMap<String, Room> exits;// stores exits of this room.
-    private Item item;
-    // inventory room
-    private Inventory inventoryRoom;
+  
+    private Inventory inventoryRoom = new Inventory();;    
 
     /**
      * Create a room described "description". Initially, it has no exits.
@@ -32,9 +31,9 @@ class Room
     public Room(String descripti)
     {
     	System.out.println(" =========Rooms=========");
-    	//item = new Item();
+    	//knife = new Item();
     	// inventory
-    	inventoryRoom = new Inventory();
+    	//inventoryRoom = new Inventory();
     //	inventoryRoom = new Inventory(); // new inventory 
     	System.out.println(descripti); // prints location and what weapon is in the room.
     //	inventoryRoom.room(); //  adds item to rooms
@@ -47,16 +46,16 @@ class Room
         exits = new HashMap<String, Room>(); 
     }
     
-    public void getItem(String name){
-    	//ads an item to the rooms inventory
-    	//inventoryRoom = new Inventory();
-    	inventoryRoom.addItem(name);
+    public void addItem(Item itemname){
+    	//itemname = new Item();
+    	//inventoryRoom.addItem(knife);
+    	inventoryRoom.addItem(itemname);
     }
     
-    public void getKey(String name){
-    	//ads an key to the rooms inventory
-    	//inventoryRoom = new Inventory();
-    	inventoryRoom.addItem(name);
+    public void removeItem(Item itemname){
+    	//itemname = new Item();
+    	//inventoryRoom.addItem(knife);
+    	inventoryRoom.removeItem(itemname);
     }
     
     /**

@@ -6,24 +6,18 @@ public class Item {
 	
 	private HashMap<String, Knife> weapons;
 	
-	private Key key;
-	private Knife knife;
-	
+	private int weight = 10;
 	//private int weight;
 	//private boolean keychain = false;
+	
+	//private Item item;
 	
 	public Item(){
 
 	}
-	
-	public Item Keys(){
-		key = new Key();
-		return this;
-	}
-	
-	public Item Knifes(){
-		knife = new Knife();
-		return this;
+
+	public int getWeight() {
+		return weight;
 	}
 
 	/*public Knife MeleeWeapon(){
@@ -44,10 +38,11 @@ public class Item {
 	}*/
 	
 	//description what search sent to room
-	public String getShortDescription()
+	
+	/*public String getShortDescription()
     {
-		return "You look around for items and this is what you find" + ".\n"/* + getWeaponsString()*/ + "."; // getWeaponsString ERROR
-    }
+		return "You look around for items and this is what you find" + ".\n" + "."; // getWeaponsString ERROR
+    }*/
 	
 	/*private String getWeaponsString()
     {
