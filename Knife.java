@@ -7,10 +7,12 @@ public class Knife {
 	public int damage = 10;*/
 	//public int Weight = 10;
 
-	public String knifes;
+	public String descriptionKnife;
+	public int weight;
 
 	public Knife() {
-		//System.out.println("knife");
+		weight = 10;
+		descriptionKnife = "A knife";
 	}
 
 }

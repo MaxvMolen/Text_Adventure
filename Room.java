@@ -53,6 +53,12 @@ class Room
     	inventoryRoom.addItem(name);
     }
     
+    public void getKey(String name){
+    	//ads an key to the rooms inventory
+    	//inventoryRoom = new Inventory();
+    	inventoryRoom.addItem(name);
+    }
+    
     /**
      * Define an exit from this room.
      */
@@ -67,7 +73,8 @@ class Room
      */
     public String getShortDescription()
     {
-    	description = item.getShortDescription();
+    	//description = item.getShortDescription();
+    	description = "You look around for items and this is what you find" + ".\n"/* + getWeaponsString()*/ + "."; // getWeaponsString ERROR
     	//description = item
     	//return "You see a " + weaponDescription + " laying on the ground" + ".\n" + getExitString();
         return description;

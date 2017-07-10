@@ -14,20 +14,14 @@ public class Inventory {
 	private int weight = 10; // test weight
 	
 	public Inventory() {
-		//item = new Item(); // new item
-		//item.MeleeWeapon();
 		ItemsInv = new HashMap<String, Item>();
 	}
 	
 	public void player () {
 		System.out.println(" =========Player=========");
 		// indicates if its a inventory for room or player
-		//System.out.println("Player");
-		item = new Item(); 
-		//item.MeleeWeapon(); adds by calling the class and then the function MeleeWeapon
-		ItemsInv.put("knife", item);
-		//weapons.put("knife", p1);
-		//Things.put("knife", item.MeleeWeapon());
+		item = new Item();
+		ItemsInv.put("knife", item.Knifes());
 		System.out.println(ItemsInv + "=Inventory");
 		System.out.println(invItemsString());
 	}
@@ -42,28 +36,34 @@ public class Inventory {
 	}
 	
 	public void addItem(String aItems) {
-	// for loop create new items
-		//item[i] = new Item();	
-		
-		// weight items
+		// checks if there is enough room in inventory
 		if (weight <= weightLimit) {
 			item = new Item();
-			ItemsInv.put(aItems, item); // adds item to room
+			ItemsInv.put(aItems, item.Knifes()); // adds item to room
 			System.out.println(ItemsInv + "=Inventory");
-			System.out.println(invItemsString()); // print out items in hashmap
+			System.out.println(invItemsString()); // print items in hashmap 
+			System.out.println("------------");
+		}
+	}
+	
+	public void addKey(String aItems) {
+		// checks if there is enough room in inventory
+		if (weight <= weightLimit) {
+			item = new Item();
+			ItemsInv.put(aItems, item.Keys()); // adds item to room
+			System.out.println(ItemsInv + "=Inventory");
+			System.out.println(invItemsString()); // print items in hashmap 
+			System.out.println("------------");
 		}
 	}
 	
 	public void removeItem(String rItems) {
-		// removes item from inventory 
-		//ItemsInv.slice("Knife, item");
+		// removes item from inventory
+		// -weight item from inventory
 	}
 	
 	public void getTotalWeight() {
-		/*if (weight < weightLimit) {
-			item = new Item();
-			ItemsInv.put("knife", item);
-		}*/
+		// get weight from item.
 	}
 	
 	private String invItemsString()

@@ -4,22 +4,29 @@ import java.util.Set;
 
 public class Item {
 	
-	private HashMap<String, Knife> weapons; 
+	private HashMap<String, Knife> weapons;
+	
+	private Key key;
+	private Knife knife;
+	
+	//private int weight;
+	//private boolean keychain = false;
 	
 	public Item(){
-	   /*weapons = new HashMap<String, Melee>();
-	    
-	    Melee p1 = new Melee();
-	    
-	    //the description that goes with the item number
-	    p1.knifes = "A Small Knife";
-	    
-	    //string (name of the item), item number
-	    weapons.put("knife", p1);*/
-		//MeleeWeapon();
+
+	}
+	
+	public Item Keys(){
+		key = new Key();
+		return this;
+	}
+	
+	public Item Knifes(){
+		knife = new Knife();
+		return this;
 	}
 
-	public Knife MeleeWeapon(){
+	/*public Knife MeleeWeapon(){
 
 	    weapons = new HashMap<String, Knife>();
 	    
@@ -34,7 +41,7 @@ public class Item {
 	    
 	    System.out.println(weapons);
 	    return p1;
-	}
+	}*/
 	
 	//description what search sent to room
 	public String getShortDescription()

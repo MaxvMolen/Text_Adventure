@@ -42,7 +42,7 @@ class Game
         outside.getItem("knife"); //puts item in inventory of room
         
         theatre = new Room("in a lecture theatre");
-        theatre.getItem("key");
+        theatre.getKey("key");
         
         pub = new Room("in the campus pub");
         lab = new Room("in a computing lab");
