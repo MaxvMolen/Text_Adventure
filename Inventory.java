@@ -23,7 +23,11 @@ public class Inventory {
 		System.out.println(ItemsInv + "=Inventory");
 		//System.out.println(invItemsString());
 	}*/
-
+	
+	public void player() {
+		System.out.println(" =========Player=========");
+	}
+	
 	public void room() {
 		System.out.println(" =========Rooms=========");
 	}

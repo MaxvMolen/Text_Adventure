@@ -5,7 +5,7 @@ class Player {
 	
 	private int healthP;
 	// inventory player
-	private Inventory inventoryPlayer;
+	private Inventory inventoryPlayer = new Inventory();;
 
 	public Player()
     {
@@ -14,9 +14,20 @@ class Player {
 		healthP = 5;
 		
 		// inventory
-		inventoryPlayer = new Inventory();
-		
+		System.out.println(" =========Player=========");
 		//inventoryPlayer.addItem();
+    }
+	
+	public void addItem(Item itemname){
+    	//itemname = new Item();
+    	//inventoryRoom.addItem(knife);
+		inventoryPlayer.addItem(itemname);
+    }
+    
+    public void removeItem(Item itemname){
+    	//itemname = new Item();
+    	//inventoryRoom.addItem(knife);
+    	inventoryPlayer.removeItem(itemname);
     }
 	
 	// getter

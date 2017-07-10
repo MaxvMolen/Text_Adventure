@@ -6,11 +6,10 @@ public class Knife extends Item {
 	public int weight;
 
 	public Knife() {
-		//porpertiesKnife();
+		knifeProperties();
 	}
 	
 	public Knife knifeProperties() {
-		//weight = 10;
 		descriptionKnife = "A knife";
 		return this;
 	}

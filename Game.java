@@ -51,8 +51,8 @@ class Game
         outside.addItem(torch); //puts item in inventory of room.
         outside.addItem(knife); //puts item in inventory of room.
         
-        outside.removeItem(knife); // removes item from inventory room
         outside.removeItem(torch); // removes item from inventory room
+        
         theatre = new Room("in a lecture theatre");
         
         pub = new Room("in the campus pub");
@@ -146,11 +146,14 @@ class Game
         else if (commandWord.equals("look")) {
             look(command);
         }
-        else if (commandWord.equals("search")) {
+        /*else if (commandWord.equals("search")) {
         	search(command);
-        }
+        }*/
         else if (commandWord.equals("take")) {
             take(command);
+        }
+        else if (commandWord.equals("drop")) {
+            drop(command);
         }
         else if (commandWord.equals("quit")) {
             wantToQuit = quit(command);
@@ -208,9 +211,9 @@ class Game
     	System.out.println(player.getCurrentRoom().getLongDescription() + ".\n");
     }
     
-    private void search(Command command) {
+    /*private void search(Command command) {
     	System.out.println(player.getCurrentRoom().getShortDescription());
-    }
+    }*/
     
     // take an item from the ground
     private void take(Command command) {
@@ -219,24 +222,20 @@ class Game
             System.out.println("Take what?");
             return;
         }
-    	// changed when inventory is done
-    	/*
-        String direction = command.getSecondWord();
-
-        // Try to leave current room.
-        Room nextRoom = player.getCurrentRoom().getExit(direction);
-
-        if (nextRoom == null)
-            System.out.println("There is no door!");
-        else {
-            player.setCurrentRoom(nextRoom);
-            System.out.println(player.getCurrentRoom().getLongDescription());
-        }*/
-    	
-    	// test
-    	//System.out.println(item.getShortDescription());
     	System.out.println("You glance at the object and decide to pick it up.");
-
+    	
+    	player.addItem(knife);
+    }
+    
+    private void drop(Command command) {
+    	if(!command.hasSecondWord()) {
+            // if there is no second word, we don't know where to go...
+            System.out.println("Drop what?");
+            return;
+        }
+    	System.out.println("You Drop the object.");
+    	
+    	player.removeItem(knife);
     }
 
     /**

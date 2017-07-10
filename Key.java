@@ -6,11 +6,10 @@ public class Key extends Item {
 	public boolean keychain = false;
 	
 	public Key() {
-		//keyProperties();
+		keyProperties();
 	}
 	
 	public Key keyProperties() {
-		//weight = 5;
 		keychain = true;
 		descriptionKey = "A key for a door";
 		return this;
