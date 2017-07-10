@@ -22,7 +22,7 @@ public class Inventory {
 	public void player () {
 		System.out.println(" =========Player=========");
 		// indicates if its a inventory for room or player
-		System.out.println("Player");
+		//System.out.println("Player");
 		item = new Item(); 
 		//item.MeleeWeapon(); adds by calling the class and then the function MeleeWeapon
 		ItemsInv.put("knife", item);
