@@ -10,7 +10,8 @@ public class Inventory {
 	private HashMap<String, Item> ItemsInv;
 	
 	private Item item;
-	private int weightLimit;
+	private int weightLimit = 10; // weight limit
+	private int weight = 10; // test weight
 	
 	public Inventory() {
 		//item = new Item(); // new item
@@ -42,12 +43,15 @@ public class Inventory {
 	
 	public void addItem(String aItems) {
 	// for loop create new items
-		//item[i] = new Item();		
-		item = new Item();
-		ItemsInv.put(aItems, item); // adds item to room
-		System.out.println(ItemsInv + "=Inventory");
+		//item[i] = new Item();	
 		
-		System.out.println(invItemsString()); // print out items in hashmap
+		// weight items
+		if (weight <= weightLimit) {
+			item = new Item();
+			ItemsInv.put(aItems, item); // adds item to room
+			System.out.println(ItemsInv + "=Inventory");
+			System.out.println(invItemsString()); // print out items in hashmap
+		}
 	}
 	
 	public void removeItem(String rItems) {
@@ -70,6 +74,5 @@ public class Inventory {
             returnString += " " + iter.next();
         return returnString;
     }
-
-
+	
 }
