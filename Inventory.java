@@ -11,16 +11,13 @@ public class Inventory {
 	private int weightLimit = 20;
 	
 	public Inventory() {
-		//ItemsInv = new HashMap<String, Item>();
 	}
 	
 	public void addItem(Item items) {
 		// checks if there is enough room in inventory
 		if (getCurrentWeight() + items.getWeight() <= weightLimit) {
-			//item = new Item();
 			ItemsInv.add(items); // adds item to room
 			System.out.println(ItemsInv + "=Inventory");
-			//System.out.println(invItemsString()); // print items in hashmap 
 			System.out.println("------------");
 		}
 	}

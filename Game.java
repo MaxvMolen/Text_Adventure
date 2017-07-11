@@ -233,6 +233,7 @@ class Game
     	player.search();
     }
     
+    // Use an item
     private void useItem(Command command) {
     	if(!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
@@ -242,7 +243,7 @@ class Game
     	player.useItem(command.getSecondWord());
     }
     
-    // take an item from the ground
+    // Take an item from the ground
     private void take(Command command) {
     	if(!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
@@ -253,6 +254,7 @@ class Game
     	player.takeItem(command.getSecondWord());
     }
     
+    // Drop an item on the ground
     private void drop(Command command) {
     	if(!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
