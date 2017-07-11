@@ -41,7 +41,8 @@ public class Inventory {
 	
 	public void search(){
 		System.out.println(ItemsInv + "=Inventory");
-		System.out.println("weight of items: " + getCurrentWeight());
+		System.out.println("Weight of items: " + getCurrentWeight());
+		System.out.println("Your weight limit is: " + weightLimit);
 	}
 	
 	public Item useItem(String itemname){
