@@ -210,7 +210,7 @@ class Game
         else {
             player.setCurrentRoom(nextRoom);
             System.out.println(player.getCurrentRoom().getLongDescription());
-            player.damage(1); // damages de player elke keer als ie naar een andere kamer to gaat.
+            //player.damage(1); // damages de player elke keer als ie naar een andere kamer to gaat.
         }
     }
     
@@ -233,7 +233,7 @@ class Game
     	player.search();
     }
     
-    // Use an item
+    // Use any item. you will lose 1 health after use
     private void useItem(Command command) {
     	if(!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...

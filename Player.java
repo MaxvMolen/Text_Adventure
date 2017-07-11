@@ -9,7 +9,7 @@ class Player {
 	public Player()
     {
 		// total health player
-		healthP = 10;
+		healthP = 15;
     }
 	
 	public void addItem(Item itemname){
@@ -78,7 +78,7 @@ class Player {
 		Item item = currentRoom.removeItem(itemName);
 		if (item != null){
 			addItem(item);
-			System.out.println("Added item to inventory");
+			System.out.println("Added " + item.getDiscription() + " to inventory");
 		} else {
 			System.out.println("Cant pick up that item");
 		}
