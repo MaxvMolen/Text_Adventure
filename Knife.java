@@ -1,11 +1,14 @@
 
 	
 public class Knife extends Item {
-
-	public String descriptionKnife;
+	
+	private int weight = 10;
 
 	public Knife(String description) {
-		//descriptionKnife = "A knife";
+
 	}
 	
+	public int getWeight() {
+		return weight;
+	}
 }

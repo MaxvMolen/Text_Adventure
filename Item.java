@@ -16,20 +16,4 @@ public class Item {
 		return weight;
 	}
 	
-	//description what search sent to room
-	
-	/*public String getShortDescription()
-    {
-		return "You look around for items and this is what you find" + ".\n" + "."; // getWeaponsString ERROR
-    }*/
-	
-	/*private String getWeaponsString()
-    {
-        String returnString = "Weapons:";
-        Set<String> keys = weapons.keySet();
-        for(Iterator<String> iter = keys.iterator(); iter.hasNext(); )
-            returnString += " " + iter.next();
-        return returnString;
-    }*/
-	
 }

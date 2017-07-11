@@ -1,12 +1,14 @@
 
 public class Key extends Item {
-
-	public String descriptionKey;
-	public boolean keychain = false;
+	
+	private int weight = 5;
 	
 	public Key(String description) {
-		/*keychain = true;
-		descriptionKey = "A key for a door";*/
+
+	}
+	
+	public int getWeight() {
+		return weight;
 	}
 	
 }
