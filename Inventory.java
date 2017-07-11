@@ -8,7 +8,7 @@ public class Inventory {
 	
 	
 	private Item item;
-	private int weightLimit = 20;
+	private int weightLimit = 30;
 	
 	public Inventory() {
 	}
@@ -41,6 +41,7 @@ public class Inventory {
 	
 	public void search(){
 		System.out.println(ItemsInv + "=Inventory");
+		System.out.println("weight of items: " + getCurrentWeight());
 	}
 	
 	public Item useItem(String itemname){
