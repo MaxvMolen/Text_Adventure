@@ -19,7 +19,7 @@ class Game
 {
     private Parser parser;
     private Player player;
-    private Item knife,torch,key, item;
+    private Item knife,torch,key;
 
     /**
      * Create the game and initialise its internal map.
@@ -45,7 +45,7 @@ class Game
      */
     private void createRooms()
     {
-        Room outside, theatre, pub, lab, office, up_theatre, down_theatre;
+        Room outside, theatre, pub, lab, office, up_theatre, down_theatre, city;
         
         // create the rooms
         outside = new Room("outside the main entrance of the university");
@@ -57,7 +57,8 @@ class Game
         pub = new Room("in the campus pub");
         lab = new Room("in a computing lab");
         office = new Room("in the computing admin office");
-        
+        city = new Room(" in your appartment in the city");
+        		
         office.addItem(key); //puts item in inventory of room.
         
         // up en down stairs room opdracht 
@@ -88,6 +89,7 @@ class Game
         // office
         office.setExit("west", lab);
         // sets the player's starting point
+        city.setExit("sleep", outside);
         player.setCurrentRoom(outside);
     }
 
@@ -231,6 +233,15 @@ class Game
     private void searchInv(Command command) {
      	System.out.println("You look in you backback");
     	player.search();
+    }
+    
+    private void winGame(Key keys){
+    	if(keys.getKey() == true){
+    		//player.setCurrentRoom(city);
+    		System.out.println("Suddenly you wake up in your appartment in the city");
+    	}
+    	//return keys.getKey();
+    	keys.getKey();
     }
     
     // Use any item. you will lose 1 health after use

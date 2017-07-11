@@ -61,6 +61,11 @@ class Player {
 		inventoryPlayer.search();
 	}
 	
+	public void winGame(Item keys){
+		//keys
+		//Key item = null;
+	}
+	
 	public void useItem(String itemName){
 		//inventoryPlayer.useItem();
 		Item item = this.useItems(itemName);
