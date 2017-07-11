@@ -42,10 +42,8 @@ class Room
     	inventoryRoom.addItem(itemname);
     }
     
-    public void removeItem(Item itemname){
-    	//itemname = new Item();
-    	//inventoryRoom.addItem(knife);
-    	inventoryRoom.removeItem(itemname);
+    public Item removeItem(String itemname){
+    	return inventoryRoom.removeItem(itemname);
     }
     
     /**

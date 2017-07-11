@@ -18,10 +18,8 @@ class Player {
 		inventoryPlayer.addItem(itemname);
     }
     
-    public void removeItem(Item itemname){
-    	//itemname = new Item();
-    	//inventoryRoom.addItem(knife);
-    	inventoryPlayer.removeItem(itemname);
+    public Item removeItem(String itemname){
+    	return inventoryPlayer.removeItem(itemname);
     }
 	
 	// getter
@@ -52,6 +50,16 @@ class Player {
 			//this.healthP = 0;
 			System.out.println("You Died");
 			
+		}
+	}
+
+	public void takeItem(String itemName) {
+		Item item = currentRoom.removeItem(itemName);
+		if (item != null){
+			addItem(item);
+			System.out.println("Added item to inventory");
+		} else {
+			System.out.println("Cant pick up that item");
 		}
 	}
 }

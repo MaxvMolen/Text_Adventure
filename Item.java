@@ -2,18 +2,21 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Item {
+public abstract class Item {
 	
 	private HashMap<String, Knife> weapons;
 	
-	private int weight = 10;
-	
-	public Item(){
-
-	}
+	protected String name;
+	protected int weight = 10;
+	protected String itemDescription;
 
 	public int getWeight() {
 		return weight;
+	}
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
 	}
 	
 }

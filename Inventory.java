@@ -25,10 +25,21 @@ public class Inventory {
 		}
 	}
 	
-	public void removeItem(Item items) {
-		ItemsInv.remove(items);
+	public Item removeItem(String itemname) {
+		Item item2 = null; 
+		for (Item item : ItemsInv) {
+			if(item.getName().equalsIgnoreCase(itemname)){
+				item2 = item;
+				break;
+			}
+		}
+		if (item2 == null){
+			return null;
+		}
+		ItemsInv.remove(item2);
 		System.out.println(ItemsInv + "=Inventory");
 		System.out.println("------------");
+		return item2;
 	}
 	
 	public int getCurrentWeight() {

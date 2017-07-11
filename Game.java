@@ -35,9 +35,9 @@ class Game
     }
 
     private void createItems() {
-    	knife = new Knife("A knife");
-    	torch = new Torch("A torch");
-    	key = new Key("A key");
+    	knife = new Knife("Knife", "A realy sharp knife");
+    	torch = new Torch("Torch", "A burning torch");
+    	key = new Key("Key", "A key to a door");
 	}
 
 	/**
@@ -227,7 +227,7 @@ class Game
             return;
         }
     	System.out.println("You try to pick up the item");
-    	player.addItem(knife);
+    	player.takeItem(command.getSecondWord());
     }
     
     private void drop(Command command) {
@@ -238,7 +238,7 @@ class Game
         }
     	System.out.println("You Drop the object.");
     	
-    	player.removeItem(knife);
+    	//player.removeItem(knife);
     }
 
     /**
