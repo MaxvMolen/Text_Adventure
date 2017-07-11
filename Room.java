@@ -31,18 +31,8 @@ class Room
     public Room(String descripti)
     {
     	System.out.println(" =========Rooms=========");
-    	//knife = new Item();
-    	// inventory
-    	//inventoryRoom = new Inventory();
-    //	inventoryRoom = new Inventory(); // new inventory 
     	System.out.println(descripti); // prints location and what weapon is in the room.
-    //	inventoryRoom.room(); //  adds item to rooms
-    	//inventoryRoom.addItem();
         this.description = descripti;
-        /*if(descripti == description){
-    		inventoryRoom = new Inventory(); // new inventory 
-        	inventoryRoom.room();
-    	}*/
         exits = new HashMap<String, Room>(); 
     }
     

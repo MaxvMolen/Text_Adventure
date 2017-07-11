@@ -8,28 +8,10 @@ public class Inventory {
 	
 	
 	private Item item;
-	private int weightLimit = 100; // weight limit
-	/*private int weight = 0; // test weight*/
+	private int weightLimit = 20;
 	
 	public Inventory() {
 		//ItemsInv = new HashMap<String, Item>();
-	}
-	
-	/*public void player(Item items) {
-		System.out.println(" =========Player=========");
-		// indicates if its a inventory for room or player
-		item = new Item();
-		ItemsInv.add(items);
-		System.out.println(ItemsInv + "=Inventory");
-		//System.out.println(invItemsString());
-	}*/
-	
-	public void player() {
-		System.out.println(" =========Player=========");
-	}
-	
-	public void room() {
-		System.out.println(" =========Rooms=========");
 	}
 	
 	public void addItem(Item items) {
@@ -43,12 +25,7 @@ public class Inventory {
 		}
 	}
 	
-	
 	public void removeItem(Item items) {
-		// removes item from inventory
-		// -weight item from inventory
-		
-		//getCurrentWeight() - items.getWeight();
 		ItemsInv.remove(items);
 		System.out.println(ItemsInv + "=Inventory");
 		System.out.println("------------");

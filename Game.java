@@ -19,7 +19,7 @@ class Game
 {
     private Parser parser;
     private Player player;
-    private Item knife,torch;
+    private Item knife,torch,key, item;
 
     /**
      * Create the game and initialise its internal map.
@@ -29,13 +29,15 @@ class Game
     	player = new Player();
     	createItems();
         createRooms();
-        parser = new Parser(); 
+        parser = new Parser();
+        
+       	
     }
 
     private void createItems() {
-		// TODO Auto-generated method stub
-    	knife = new Item();
-    	torch = new Item();
+    	knife = new Knife("A knife");
+    	torch = new Torch("A torch");
+    	key = new Key("A key");
 	}
 
 	/**
@@ -44,20 +46,19 @@ class Game
     private void createRooms()
     {
         Room outside, theatre, pub, lab, office, up_theatre, down_theatre;
-
+        
         // create the rooms
         outside = new Room("outside the main entrance of the university");
-       
-        outside.addItem(torch); //puts item in inventory of room.
-        outside.addItem(knife); //puts item in inventory of room.
         
-        outside.removeItem(torch); // removes item from inventory room
+        outside.addItem(torch);
         
         theatre = new Room("in a lecture theatre");
-        
         pub = new Room("in the campus pub");
         lab = new Room("in a computing lab");
         office = new Room("in the computing admin office");
+        
+        office.addItem(key); //puts item in inventory of room.
+        
         // up en down stairs room opdracht 
         up_theatre = new Room("in the top floor of the theatre");
         down_theatre = new Room("in the bottem floor of the theatre");
@@ -73,6 +74,9 @@ class Game
         theatre.setExit("down", down_theatre);
         // theatre top floor
         up_theatre.setExit("down", theatre);
+        
+        up_theatre.addItem(knife);
+        
         // theatre bottem floor
         down_theatre.setExit("up", theatre);
         // pub
@@ -146,9 +150,9 @@ class Game
         else if (commandWord.equals("look")) {
             look(command);
         }
-        /*else if (commandWord.equals("search")) {
+        else if (commandWord.equals("search")) {
         	search(command);
-        }*/
+        }
         else if (commandWord.equals("take")) {
             take(command);
         }
@@ -211,9 +215,9 @@ class Game
     	System.out.println(player.getCurrentRoom().getLongDescription() + ".\n");
     }
     
-    /*private void search(Command command) {
-    	System.out.println(player.getCurrentRoom().getShortDescription());
-    }*/
+    private void search(Command command) {
+    	System.out.println();
+    }
     
     // take an item from the ground
     private void take(Command command) {
@@ -222,8 +226,7 @@ class Game
             System.out.println("Take what?");
             return;
         }
-    	System.out.println("You glance at the object and decide to pick it up.");
-    	
+    	System.out.println("You try to pick up the item");
     	player.addItem(knife);
     }
     

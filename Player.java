@@ -4,18 +4,12 @@ class Player {
 	private Room currentRoom;
 	
 	private int healthP;
-	// inventory player
 	private Inventory inventoryPlayer = new Inventory();;
 
 	public Player()
     {
-		// make inventory of the playe
 		// total health player
-		healthP = 5;
-		
-		// inventory
-		System.out.println(" =========Player=========");
-		//inventoryPlayer.addItem();
+		healthP = 10;
     }
 	
 	public void addItem(Item itemname){
