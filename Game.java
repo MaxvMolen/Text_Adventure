@@ -51,6 +51,7 @@ class Game
         outside = new Room("outside the main entrance of the university");
         
         outside.addItem(torch);
+        outside.addItem(knife);
         
         theatre = new Room("in a lecture theatre");
         pub = new Room("in the campus pub");
@@ -159,6 +160,9 @@ class Game
         else if (commandWord.equals("take")) {
             take(command);
         }
+        else if (commandWord.equals("use")) {
+            useItem(command);
+        }
         else if (commandWord.equals("drop")) {
             drop(command);
         }
@@ -227,6 +231,15 @@ class Game
     private void searchInv(Command command) {
      	System.out.println("You look in you backback");
     	player.search();
+    }
+    
+    private void useItem(Command command) {
+    	if(!command.hasSecondWord()) {
+            // if there is no second word, we don't know where to go...
+            System.out.println("Use what?");
+            return;
+        }
+    	player.useItem(command.getSecondWord());
     }
     
     // take an item from the ground

@@ -15,7 +15,7 @@ public abstract class Item {
 	}
 
 	public String getName() {
-		// TODO Auto-generated method stub
+		
 		return name;
 	}
 	

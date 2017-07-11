@@ -46,6 +46,20 @@ public class Inventory {
 		System.out.println(ItemsInv + "=Inventory");
 	}
 	
+	public Item useItem(String itemname){
+		Item item2 = null; 
+		for (Item item : ItemsInv) {
+			if(item.getName().equalsIgnoreCase(itemname)){
+				item2 = item;
+				break;
+			}
+		}
+		if (item2 == null){
+			return null;
+		}
+		return item2;
+	}
+	
 	public int getCurrentWeight() {
 		int weight = 0;
 		for (Item item : ItemsInv) {

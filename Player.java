@@ -21,6 +21,10 @@ class Player {
     public Item removeItem(String itemname){
     	return inventoryPlayer.removeItem(itemname);
     }
+    
+    public Item useItems(String itemName){
+		return inventoryPlayer.useItem(itemName);
+    }
 	
 	// getter
 	public Room getCurrentRoom() {
@@ -52,8 +56,22 @@ class Player {
 			
 		}
 	}
+	
 	public void search(){
 		inventoryPlayer.search();
+	}
+	
+	public void useItem(String itemName){
+		//inventoryPlayer.useItem();
+		Item item = this.useItems(itemName);
+		//Item item = null;
+		if (item != null){
+			this.healthP -= 1;
+			System.out.println("You hurt yourself using the item");
+			System.out.println("-1 Health");
+		} else {
+			System.out.println("You cant use that item");
+		}
 	}
 
 	public void takeItem(String itemName) {
