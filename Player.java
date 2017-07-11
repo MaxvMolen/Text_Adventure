@@ -52,6 +52,9 @@ class Player {
 			
 		}
 	}
+	public void search(){
+		inventoryPlayer.search();
+	}
 
 	public void takeItem(String itemName) {
 		Item item = currentRoom.removeItem(itemName);

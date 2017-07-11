@@ -46,6 +46,10 @@ class Room
     	return inventoryRoom.removeItem(itemname);
     }
     
+	public void search(){
+		inventoryRoom.search();
+	}
+    
     /**
      * Define an exit from this room.
      */

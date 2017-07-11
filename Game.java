@@ -153,6 +153,9 @@ class Game
         else if (commandWord.equals("search")) {
         	search(command);
         }
+        else if (commandWord.equals("inventory")) {
+        	searchInv(command);
+        }
         else if (commandWord.equals("take")) {
             take(command);
         }
@@ -215,8 +218,15 @@ class Game
     	System.out.println(player.getCurrentRoom().getLongDescription() + ".\n");
     }
     
+    // search room
     private void search(Command command) {
-    	System.out.println();
+    	System.out.println("You search the room and this is what you find");
+    	player.getCurrentRoom().search();
+    }
+    // look in the inv player
+    private void searchInv(Command command) {
+     	System.out.println("You look in you backback");
+    	player.search();
     }
     
     // take an item from the ground

@@ -42,6 +42,10 @@ public class Inventory {
 		return item2;
 	}
 	
+	public void search(){
+		System.out.println(ItemsInv + "=Inventory");
+	}
+	
 	public int getCurrentWeight() {
 		int weight = 0;
 		for (Item item : ItemsInv) {
