@@ -62,6 +62,17 @@ class Player {
 			System.out.println("Cant pick up that item");
 		}
 	}
+	
+	public void dropItem(String itemName) {
+		Item item = this.removeItem(itemName);
+		if (item != null){
+			//Room.addItem(item);
+			currentRoom.addItem(item);
+			System.out.println("Added item to inventory");
+		} else {
+			System.out.println("Cant pick up that item");
+		}
+	}
 }
 
 

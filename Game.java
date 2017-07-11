@@ -237,8 +237,7 @@ class Game
             return;
         }
     	System.out.println("You Drop the object.");
-    	
-    	//player.removeItem(knife);
+    	player.dropItem(command.getSecondWord());
     }
 
     /**
