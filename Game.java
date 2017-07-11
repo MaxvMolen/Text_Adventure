@@ -239,6 +239,7 @@ class Game
     	if(keys.getKey() == true){
     		//player.setCurrentRoom(city);
     		System.out.println("Suddenly you wake up in your appartment in the city");
+    		System.out.println("It looks like it was just a dream");
     	}
     	//return keys.getKey();
     	keys.getKey();

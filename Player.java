@@ -62,8 +62,7 @@ class Player {
 	}
 	
 	public void winGame(Item keys){
-		//keys
-		//Key item = null;
+		
 	}
 	
 	public void useItem(String itemName){
